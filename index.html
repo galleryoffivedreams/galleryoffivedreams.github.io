@@ -578,6 +578,28 @@
 
   .print-btn:hover { background: var(--gold-light); }
 
+  /* ── MOBILE FIXES ── */
+  @media screen and (max-width: 800px) {
+    .cover,
+    .intro-page,
+    .painting-page,
+    .detail-page,
+    .series-page,
+    .closing-page {
+      min-height: auto;
+    }
+
+    .print-bar {
+      bottom: 14px;
+      right: 14px;
+    }
+
+    .print-btn {
+      padding: 10px 18px;
+      font-size: 0.65rem;
+    }
+  }
+
   /* placeholder for missing image */
   .img-placeholder {
     width: 100%;
