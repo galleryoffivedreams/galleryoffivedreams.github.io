@@ -376,6 +376,101 @@
     max-width: 500px;
   }
 
+  .acquire-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    max-width: 440px;
+    margin-bottom: 56px;
+  }
+
+  .acquire-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .acquire-number {
+    font-family: var(--display);
+    font-size: 1.3rem;
+    color: var(--gold);
+    min-width: 32px;
+  }
+
+  .acquire-step-title {
+    font-family: var(--fine);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .acquire-step-body {
+    font-family: var(--body);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--silver);
+  }
+
+  .acquire-cta {
+    display: inline-block;
+    padding: 16px 44px;
+    background: var(--gold);
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--fine);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .acquire-cta:hover {
+    background: var(--gold-light);
+  }
+
+  .acquire-cta-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .acquire-cta-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+  }
+
+  .acquire-cta-outline:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 420px;
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  .payment-method {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .payment-qr {
+    width: 160px;
+    height: auto;
+    border: 1px solid var(--ash);
+  }
+
   /* ── CLOSING PAGE ── */
   .closing-page {
     display: flex;
@@ -902,8 +997,80 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     PAGE 28 — CLOSING
+     PAGE 28 — HOW TO ACQUIRE
 ════════════════════════════════════════════ -->
+<div class="page">
+  <div class="closing-page">
+    <div class="closing-rule-top"></div>
+    <h2 class="closing-title">How to Acquire a Piece</h2>
+
+    <div class="acquire-steps">
+      <div class="acquire-step">
+        <div class="acquire-number">1</div>
+        <div>
+          <div class="acquire-step-title">Inquire</div>
+          <div class="acquire-step-body">Send us the title of the piece you're drawn to, or a screenshot. We'll confirm availability and price.</div>
+        </div>
+      </div>
+      <div class="acquire-step">
+        <div class="acquire-number">2</div>
+        <div>
+          <div class="acquire-step-title">Confirm</div>
+          <div class="acquire-step-body">We'll walk you through payment and shipping — free within Metro Manila, with a turnaround of about a week. International shipping available.</div>
+        </div>
+      </div>
+      <div class="acquire-step">
+        <div class="acquire-number">3</div>
+        <div>
+          <div class="acquire-step-title">Receive</div>
+          <div class="acquire-step-body">Your piece arrives with a signed certificate of authenticity from the artist.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="acquire-cta-group">
+      <a href="mailto:hello@galleryoffivedreams.com?subject=Inquiry%20about%20a%20piece" class="acquire-cta">Email Us</a>
+      <a href="https://instagram.com/gallery_of_5dreams" target="_blank" class="acquire-cta acquire-cta-outline">Message on Instagram</a>
+    </div>
+
+    <div class="closing-rule-bottom"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE 29 — PAYMENT OPTIONS
+════════════════════════════════════════════ -->
+<div class="page">
+  <div class="closing-page">
+    <div class="closing-rule-top"></div>
+    <h2 class="closing-title">Payment Options</h2>
+    <p class="closing-body">Once a piece is confirmed, payment can be made through any of the following.</p>
+
+    <div class="payment-methods">
+      <div class="payment-method">
+        <div class="acquire-step-title">PayPal</div>
+        <div class="acquire-step-body">paypal.me/Gallery5Dreams<br>Also accepts credit and debit cards — no PayPal account required.</div>
+      </div>
+
+      <div class="payment-method">
+        <div class="acquire-step-title">GCash</div>
+        <img src="images/gcash-qr.jpeg" alt="GCash QR code" class="payment-qr">
+      </div>
+
+      <div class="payment-method">
+        <div class="acquire-step-title">Bank Transfer</div>
+        <div class="acquire-step-body">Details provided directly upon confirming your piece.</div>
+      </div>
+    </div>
+
+    <div class="closing-rule-bottom"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE 30 — CLOSING
+════════════════════════════════════════════ -->
+
 <div class="page">
   <div class="closing-page">
     <div class="closing-rule-top"></div>
