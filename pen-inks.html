@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pen &amp; Inks — Gallery of Five Dreams</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --cream:#F6F1E7; --cream-deep:#221D18; --ink:#15120F;
+    --bronze:#A9803F; --bronze-light:#C8A968; --rose:#CC9C8F;
+    --line:rgba(246,241,231,0.14);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--ink); color:var(--cream); font-family:'EB Garamond', serif; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  .wrap{ max-width:1040px; margin:0 auto; padding:0 24px; }
+
+  nav{ padding:22px 0; border-bottom:1px solid var(--line); }
+  nav .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .brand{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:20px; letter-spacing:0.02em; }
+  .navlinks{ display:flex; gap:26px; font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.05em; text-transform:uppercase; }
+  .navlinks a{ text-decoration:none; opacity:0.75; }
+  .navlinks a:hover, .navlinks a.active{ opacity:1; border-bottom:1px solid var(--bronze-light); padding-bottom:3px; }
+
+  header{ padding:60px 0 36px; text-align:center; }
+  .eyebrow{ font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose); margin-bottom:14px; }
+  h1{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:clamp(32px,6vw,52px); }
+  .sub{ max-width:540px; margin:16px auto 0; font-size:17px; line-height:1.6; color:rgba(246,241,231,0.75); font-style:italic; }
+
+  main{ padding:20px 0 40px; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px; margin-top:44px; }
+
+  .piece{ background:var(--cream-deep); border:1px solid var(--line); position:relative; }
+  .piece.sold{ opacity:0.88; }
+  .sold-ribbon{ position:absolute; top:16px; right:-6px; background:var(--bronze-light); color:var(--ink); font-family:'Inter',sans-serif; font-size:11px; letter-spacing:0.08em; padding:6px 16px; z-index:2; }
+
+  .frame{ aspect-ratio:4/5; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; background:repeating-linear-gradient(135deg, rgba(200,169,104,0.07) 0 2px, transparent 2px 14px), var(--cream-deep); border-bottom:1px solid var(--line); }
+  .frame img{ width:100%; height:100%; object-fit:cover; }
+  .frame::before{ content:''; position:absolute; inset:14px; border:1.5px solid var(--bronze-light); pointer-events:none; }
+  .frame-label{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:14px; color:var(--rose); text-align:center; padding:0 20px; position:relative; z-index:1; }
+
+  .piece-info{ padding:22px 24px 26px; }
+  .piece-title{ font-family:'Cormorant Garamond', serif; font-size:22px; font-weight:600; }
+  .piece-meta{ font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:rgba(246,241,231,0.55); margin-top:4px; }
+  .piece-framing{ font-family:'Inter', sans-serif; font-size:11.5px; letter-spacing:0.04em; color:var(--bronze-light); margin-top:6px; }
+  .piece-tagline{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:16px; color:var(--rose); margin-top:14px; line-height:1.5; }
+  .piece-desc{ font-family:'EB Garamond', serif; font-size:14.5px; line-height:1.75; color:rgba(246,241,231,0.8); margin-top:12px; white-space:pre-line; }
+  .piece-price{ margin-top:16px; font-family:'Inter', sans-serif; font-size:15px; font-weight:600; color:var(--bronze-light); }
+  .piece.sold .piece-price{ color:rgba(246,241,231,0.4); text-decoration:line-through; }
+
+  footer{ text-align:center; padding:44px 0 60px; font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.04em; color:rgba(246,241,231,0.5); border-top:1px solid var(--line); margin-top:40px; }
+  footer a{ color:var(--bronze-light); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">GALLERY OF FIVE DREAMS</div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="pen-inks.html" class="active">Pen &amp; Inks</a>
+      <a href="origins.html">Origins</a>
+      <a href="digital.html">Digital Collection</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Line, Not Color</div>
+    <h1>Pen &amp; Inks</h1>
+    <p class="sub">Where the paintings pause and the line takes over — quieter, more immediate, drawn rather than built up in layers.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!--
+    ============================================================
+    HOW TO UPDATE THIS PAGE
+    ============================================================
+    Duplicate a <div class="piece"> block per drawing. Price
+    (.piece-price) has been filled in below — Toni's own pricing notes
+    for these pieces haven't been shared yet; fill in once known.
+    For a sold piece, add class="piece sold" and a
+    <div class="sold-ribbon">SOLD</div> inside .frame.
+  -->
+
+  <div class="grid">
+
+    <div class="piece">
+      <div class="frame"><img src="images/bahay-ni-lola.jpg" alt="Bahay ni Lola"></div>
+      <div class="piece-info">
+        <div class="piece-title">Bahay ni Lola (Grandmother's House)</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink · 2017 · 16 × 10 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-desc">The house once brimming with life,
+witness to laughter and tears.
+Now it stands in silence,
+left to time.
+
+Gone are the hands that shaped its garden,
+though the air stays soft, as if still guarding
+what laughter left behind.
+
+The walls will lean, and learn to fall,
+keeping their silence
+even when there is nothing left to guard.</div>
+        <div class="piece-price">₱20,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/passing-through.jpg" alt="Passing Through"></div>
+      <div class="piece-info">
+        <div class="piece-title">Passing Through</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink · 2020 · 11 × 16 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-tagline">"Not everything we encounter is meant to stay."</div>
+        <div class="piece-desc">A study of movement, instinct, and the fleeting moment in which an unseen journey passes into view.</div>
+        <div class="piece-price">₱20,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/a-soft-life-exists.jpg" alt="A Soft Life Exists"></div>
+      <div class="piece-info">
+        <div class="piece-title">A Soft Life Exists</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink · 2019 · 10 × 13 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-tagline">"Somewhere beyond the noise, life asks less of us."</div>
+        <div class="piece-desc">Framed by dense foliage and looking outward toward an open landscape, A Soft Life Exists holds the possibility of another way of being—not untouched by difficulty, but gentler within it. The distant view becomes less a destination than a reminder: softness does not have to be imagined. It exists.</div>
+        <div class="piece-price">₱16,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/ny-city-breaking-through-concrete.jpg" alt="NY City: Breaking Through Concrete"></div>
+      <div class="piece-info">
+        <div class="piece-title">NY City: Breaking Through Concrete</div>
+        <div class="piece-meta">BogaCA · Ink with Watercolor · 26 × 34 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-tagline">"A city of millions, and still each story walks alone."</div>
+        <div class="piece-desc">A city rendered in black-and-white discipline, then ruptured by color like a heartbeat breaking through concrete. The marks move across buildings, streets, and neighborhoods without obeying their boundaries—suggesting the countless lives unfolding within the city's ordered grid.
+
+From a distance, New York becomes one immense organism. Up close, it is millions of separate stories—moving side by side, each following a life entirely its own.</div>
+        <div class="piece-price">₱75,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/the-weary-banister.jpg" alt="The Weary Banister"></div>
+      <div class="piece-info">
+        <div class="piece-title">The Weary Banister</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink · 10.5 × 6.5 in</div>
+        <div class="piece-framing">Framed, ready to hang</div>
+        <div class="piece-tagline">"Some things grow tired from holding us up."</div>
+        <div class="piece-desc">Worn by years of use, the old banister bears its age without surrendering its purpose. Every curve, mark, and imperfection records the countless hands it has steadied along the way.
+
+The Weary Banister turns an ordinary architectural detail into a study of endurance: the unnoticed things that support us, long after they have begun to show the weight of doing so.</div>
+        <div class="piece-price">₱23,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/when-she-left.jpg" alt="When She Left"></div>
+      <div class="piece-info">
+        <div class="piece-title">When She Left</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink with Color · 10.5 × 6.5 in</div>
+        <div class="piece-framing">Framed, ready to hang</div>
+        <div class="piece-tagline">"She took nothing the room could forget."</div>
+        <div class="piece-desc">When She Left captures the space that changes when someone is gone. An empty chair, a weathered room, and a single red cloth hold the presence of someone we never see.
+
+Nothing tells us who she was, why she left, or whether she will return. The room offers only what was left behind—a chair no longer occupied, a red cloth never gathered, and a window that continues to let the day in.</div>
+        <div class="piece-price">₱25,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/the-gazebo.jpg" alt="The Gazebo"></div>
+      <div class="piece-info">
+        <div class="piece-title">The Gazebo</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink · 2019 · 10 × 13.5 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-desc">The branches bend as if to hear
+the secrets buried year by year.
+And in their hush, the silence sings
+of half-forgotten, tender things.</div>
+        <div class="piece-price">₱16,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/where-the-world-opens.jpg" alt="Where the World Opens"></div>
+      <div class="piece-info">
+        <div class="piece-title">Where the World Opens</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink · 2019 · 15 × 10 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-tagline">"The horizon asks for nothing but the courage to look beyond it."</div>
+        <div class="piece-desc">An immense sky and restless sea surround a vessel at the edge of the frame, while the horizon stretches almost uninterrupted into the distance.
+
+Where the World Opens considers the moment when uncertainty begins to resemble possibility. The way forward is neither promised nor revealed; there is simply more world ahead, waiting to be entered.</div>
+        <div class="piece-price">₱18,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/embracing-the-contrast.jpg" alt="Embracing the Contrast"></div>
+      <div class="piece-info">
+        <div class="piece-title">Embracing the Contrast</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink with Color · 2024 · 11.5 × 16 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-desc">Once I dared to live again,
+the air around me shifted.
+At first, a slight tingling,
+a gentle touch.
+The ground beneath me trembled.
+
+Then loud and unafraid they came,
+wave after wave—
+a sudden rush of brilliant color.
+
+I stood in awe of what surrounded me:
+a daring contradiction
+of color and gray.
+
+I stopped waiting for the gray to leave.
+I stopped asking the colors to stay.
+
+I stood between them,
+and for the first time,
+I wanted all of it.
+
+I wanted to live.</div>
+        <div class="piece-price">₱25,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/passagenviertel.jpg" alt="Passagenviertel"></div>
+      <div class="piece-info">
+        <div class="piece-title">Passagenviertel</div>
+        <div class="piece-meta">BogaCA · Pen &amp; Ink with Colored Pencil · 15 × 11.5 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-tagline">"Some places make strangers feel less like strangers."</div>
+        <div class="piece-desc">Beneath strings of lights, bicycles gather along the street while windows and storefronts glow against the dark. Passagenviertel finds warmth in the ordinary closeness of city life—the shared streets, passing faces, and small signs that other lives are unfolding beside our own.
+
+Here, belonging does not require knowing everyone. Sometimes, it is enough simply to be among them.</div>
+        <div class="piece-price">₱15,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/the-great-pretender.jpg" alt="The Great Pretender"></div>
+      <div class="piece-info">
+        <div class="piece-title">The Great Pretender</div>
+        <div class="piece-meta">BogaCA · Charcoal on Paper · 2025 · 19 × 15 in</div>
+        <div class="piece-framing">Unframed — framing available upon inquiry</div>
+        <div class="piece-desc">Am I loved?
+My mask has grown heavy.
+I am tired.
+
+Without my mask
+I am nobody.
+Lost in my thoughts,
+away from the pretense,
+I am me.
+
+Without my mask
+I am alone.
+I can breathe.
+Away from the pretense,
+I am free.</div>
+        <div class="piece-price">₱23,000</div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  Every original includes a signed Certificate of Authenticity ·
+  <a href="index.html">galleryoffivedreams.com</a>
+</footer>
+
+</body>
+</html>

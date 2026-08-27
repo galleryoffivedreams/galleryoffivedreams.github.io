@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Origins Series — Gallery of Five Dreams</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --cream:#F6F1E7; --cream-deep:#221D18; --ink:#15120F;
+    --bronze:#A9803F; --bronze-light:#C8A968; --rose:#CC9C8F;
+    --line:rgba(246,241,231,0.14);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--ink); color:var(--cream); font-family:'EB Garamond', serif; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  .wrap{ max-width:1040px; margin:0 auto; padding:0 24px; }
+
+  nav{ padding:22px 0; border-bottom:1px solid var(--line); }
+  nav .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:'Cormorant Garamond', serif; font-weight:600; font-size:19px; letter-spacing:0.03em; color:var(--bronze-light); }
+  .brand img{ height:32px; width:32px; border-radius:50%; }
+  .navlinks{ display:flex; gap:26px; font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.05em; text-transform:uppercase; }
+  .navlinks a{ text-decoration:none; opacity:0.75; }
+  .navlinks a:hover, .navlinks a.active{ opacity:1; border-bottom:1px solid var(--bronze-light); padding-bottom:3px; }
+
+  header{ padding:60px 0 36px; text-align:center; }
+  .eyebrow{ font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose); margin-bottom:14px; }
+  h1{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:clamp(32px,6vw,52px); }
+  .sub{ max-width:520px; margin:16px auto 0; font-size:17px; line-height:1.6; color:rgba(246,241,231,0.75); font-style:italic; }
+  .price-line{ margin-top:24px; display:inline-block; font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; background:var(--bronze-light); color:var(--ink); padding:8px 18px; border-radius:2px; }
+
+  main{ padding:20px 0 40px; }
+  h2.section-title{ font-family:'Cormorant Garamond', serif; font-size:28px; font-weight:600; margin:56px 0 22px; text-align:center; }
+
+  .grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:26px; }
+
+  .piece{ background:var(--cream-deep); border:1px solid var(--line); position:relative; }
+  .piece.sold{ opacity:0.88; }
+  .sold-ribbon{ position:absolute; top:16px; right:-6px; background:var(--bronze-light); color:var(--ink); font-family:'Inter',sans-serif; font-size:11px; letter-spacing:0.08em; padding:6px 16px; z-index:2; }
+
+  .frame{ aspect-ratio:4/5; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; background:repeating-linear-gradient(135deg, rgba(200,169,104,0.07) 0 2px, transparent 2px 14px), var(--cream-deep); border-bottom:1px solid var(--line); }
+  .frame img{ width:100%; height:100%; object-fit:cover; }
+  .frame::before{ content:''; position:absolute; inset:14px; border:1.5px solid var(--bronze-light); pointer-events:none; }
+  .frame-label{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:14px; color:var(--rose); text-align:center; padding:0 20px; position:relative; z-index:1; }
+
+  .piece-info{ padding:18px 20px 22px; }
+  .piece-title{ font-family:'Cormorant Garamond', serif; font-size:21px; font-weight:600; }
+  .piece-meta{ font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:rgba(246,241,231,0.55); margin-top:4px; }
+  .piece-price{ margin-top:10px; font-family:'Inter', sans-serif; font-size:15px; font-weight:600; color:var(--bronze-light); }
+  .piece.sold .piece-price{ color:rgba(246,241,231,0.4); text-decoration:line-through; }
+
+  .testimonials{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:24px; }
+  .testimonial{ background:var(--cream-deep); border-left:3px solid var(--bronze-light); padding:22px 24px; font-style:italic; font-size:16px; line-height:1.6; }
+  .testimonial .author{ display:block; margin-top:14px; font-family:'Inter', sans-serif; font-style:normal; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:var(--bronze-light); }
+
+  .cta-row{ margin-top:16px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btn{ font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none; padding:14px 28px; border:1px solid var(--cream); }
+  .btn.primary{ background:var(--bronze-light); color:var(--ink); border-color:var(--bronze-light); }
+  .btn.secondary{ background:transparent; color:var(--cream); }
+
+  footer{ text-align:center; padding:44px 0 60px; font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.04em; color:rgba(246,241,231,0.5); border-top:1px solid var(--line); margin-top:40px; }
+  footer a{ color:var(--bronze-light); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><img src="images/logo-mark.png" alt="Gallery of Five Dreams">GALLERY OF FIVE DREAMS</div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="pen-inks.html">Pen &amp; Inks</a>
+      <a href="origins.html" class="active">Origins</a>
+      <a href="digital.html">Digital Collection</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">An Invitation to Collect</div>
+    <h1>The Origins Series</h1>
+    <p class="sub">Original paintings that mark where a collection begins — smaller in scale, no less considered. An ongoing series, with new pieces arriving regularly.</p>
+    <div class="price-line">Originals from ₱5,000</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!--
+    ============================================================
+    HOW TO UPDATE THIS PAGE
+    ============================================================
+    This is an ongoing, growing series — new pieces arrive
+    regularly. To add one: duplicate a <div class="piece"> block
+    in "Available Now", point <img src> at the file in /images/,
+    fill in medium/size/price.
+
+    When a piece sells: move its block down into "Recently Sold",
+    add class="piece sold" and a <div class="sold-ribbon">SOLD</div>
+    inside .frame, and add its testimonial once collected.
+
+    Per-piece PHP pricing (₱5,000 / ₱8,000 / below ₱15,000 tiers)
+    is still pending — price fields below are placeholders.
+  -->
+
+  <h2 class="section-title">Available Now</h2>
+  <div class="grid">
+
+    <div class="piece">
+      <div class="frame"><img src="images/none-of-my-business.jpg" alt="None of My Business"></div>
+      <div class="piece-info">
+        <div class="piece-title">None of My Business</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 20 × 16 in</div>
+        <div class="piece-price">₱5,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/i-can-see-you.jpg" alt="I Can See You"></div>
+      <div class="piece-info">
+        <div class="piece-title">I Can See You</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 20 × 16 in</div>
+        <div class="piece-price">₱5,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/before-the-morning-comes.jpg" alt="Before the Morning Comes"></div>
+      <div class="piece-info">
+        <div class="piece-title">Before the Morning Comes</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 24 × 18 in</div>
+        <div class="piece-price">₱8,000</div>
+      </div>
+    </div>
+
+    <div class="piece">
+      <div class="frame"><img src="images/a-place-in-the-sun.jpg" alt="A Place in the Sun"></div>
+      <div class="piece-info">
+        <div class="piece-title">A Place in the Sun</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 20 × 16 in</div>
+        <div class="piece-price">₱5,000</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">Recently Sold</h2>
+  <div class="grid">
+
+    <div class="piece sold">
+      <div class="frame">
+        <div class="sold-ribbon">SOLD</div>
+        <img src="images/calico.jpg" alt="Calico">
+      </div>
+      <div class="piece-info">
+        <div class="piece-title">Calico</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 20 × 16 in</div>
+        <div class="piece-price">₱5,000</div>
+      </div>
+    </div>
+
+    <div class="piece sold">
+      <div class="frame">
+        <div class="sold-ribbon">SOLD</div>
+        <img src="images/moon-dreamer.jpg" alt="Moon Dreamer">
+      </div>
+      <div class="piece-info">
+        <div class="piece-title">Moon Dreamer</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 20 × 16 in</div>
+        <div class="piece-price">₱5,000</div>
+      </div>
+    </div>
+
+    <div class="piece sold">
+      <div class="frame">
+        <div class="sold-ribbon">SOLD</div>
+        <img src="images/moon-watcher.jpg" alt="Moon Watcher">
+      </div>
+      <div class="piece-info">
+        <div class="piece-title">Moon Watcher</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 20 × 16 in</div>
+        <div class="piece-price">₱5,000</div>
+      </div>
+    </div>
+
+    <div class="piece sold">
+      <div class="frame">
+        <div class="sold-ribbon">SOLD</div>
+        <img src="images/between-two-worlds.jpg" alt="Between Two Worlds">
+      </div>
+      <div class="piece-info">
+        <div class="piece-title">Between Two Worlds</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 20 × 16 in</div>
+        <div class="piece-price">₱5,000</div>
+      </div>
+    </div>
+
+    <div class="piece sold">
+      <div class="frame">
+        <div class="sold-ribbon">SOLD</div>
+        <img src="images/mama-mary.jpg" alt="Mama Mary">
+      </div>
+      <div class="piece-info">
+        <div class="piece-title">Mama Mary</div>
+        <div class="piece-meta">BogaCA · Acrylic on Canvas · 24 × 18 in</div>
+        <div class="piece-price">₱8,000</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">What Collectors Say</h2>
+  <div class="testimonials">
+
+    <div class="testimonial">
+      "I'm a cat person, so of course this one got me. I've picked up cats from streets and even stopped for them in places I probably shouldn't have. There was just something about Calico's face that I loved. I knew I wanted her."
+      <span class="author">— Collector, on Calico</span>
+    </div>
+
+    <div class="testimonial">
+      "I had just moved into my new condo and was still figuring out what I wanted the place to feel like. This was one of the first pieces I chose for it. It's calm, a little whimsical, and it just feels good to come home to."
+      <span class="author">— Collector, on Moon Dreamer</span>
+    </div>
+
+    <div class="testimonial">
+      "I bought this together with Between Two Worlds. I liked the contrast between the two immediately — dark and bright, but they belong together. I didn't want to choose between them, so I took both."
+      <span class="author">— Collector, on Moon Watcher</span>
+    </div>
+
+    <div class="testimonial">
+      "This one has a completely different energy from Moon Watcher. It's bright, playful and impossible not to notice. The two work beautifully as a pair."
+      <span class="author">— Collector, on Between Two Worlds</span>
+    </div>
+
+    <div class="testimonial">
+      "I really loved this painting when I saw it. I'm artistic myself, so I appreciated the way Mary was interpreted — it's familiar, but done in such a different and beautiful way. I chose it for my mom, which makes it even more special to me."
+      <span class="author">— Collector, on Mama Mary</span>
+    </div>
+
+  </div>
+
+  <div class="cta-row" style="margin-top:56px;">
+    <a class="btn primary" href="https://wa.me/639178641313">Message on WhatsApp</a>
+    <a class="btn secondary" href="https://www.instagram.com/galleryoffivedreams" target="_blank" rel="noopener">DM on Instagram</a>
+  </div>
+
+</main>
+
+<footer>
+  Every original includes a signed Certificate of Authenticity ·
+  <a href="index.html">galleryoffivedreams.com</a>
+</footer>
+
+</body>
+</html>
