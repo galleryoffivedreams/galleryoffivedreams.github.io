@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop Digital — Gallery of Five Dreams</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --cream:#F6F1E7; --cream-deep:#221D18; --ink:#15120F;
+    --bronze:#A9803F; --bronze-light:#C8A968; --rose:#CC9C8F;
+    --line:rgba(246,241,231,0.14);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--ink); color:var(--cream); font-family:'EB Garamond', serif; -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; }
+  .wrap{ max-width:1040px; margin:0 auto; padding:0 24px; }
+
+  nav{ padding:22px 0; border-bottom:1px solid var(--line); }
+  nav .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:'Cormorant Garamond', serif; font-weight:600; font-size:19px; letter-spacing:0.03em; color:var(--bronze-light); }
+  .brand img{ height:32px; width:32px; border-radius:50%; }
+  .navlinks{ display:flex; gap:26px; font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.05em; text-transform:uppercase; }
+  .navlinks a{ text-decoration:none; opacity:0.75; }
+  .navlinks a:hover, .navlinks a.active{ opacity:1; border-bottom:1px solid var(--bronze-light); padding-bottom:3px; }
+
+  header{ padding:60px 0 30px; text-align:center; }
+  .eyebrow{ font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose); margin-bottom:14px; }
+  h1{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:clamp(32px,6vw,52px); }
+  .sub{ max-width:560px; margin:16px auto 30px; font-size:17px; line-height:1.6; color:rgba(246,241,231,0.75); font-style:italic; }
+
+  .etsy-cta{ display:inline-block; background:var(--bronze-light); color:var(--ink); font-family:'Inter', sans-serif; font-size:14px; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:16px 36px; }
+  .etsy-note{ margin-top:14px; font-family:'Inter', sans-serif; font-size:12px; color:rgba(246,241,231,0.55); }
+
+  main{ padding:20px 0 40px; }
+
+  .tier-section{ margin-top:64px; }
+  .tier-section:first-child{ margin-top:24px; }
+  .tier-head{ text-align:center; margin-bottom:8px; }
+  .tier-name{ font-family:'Cormorant Garamond', serif; font-size:26px; font-weight:600; color:var(--bronze-light); }
+  .tier-desc{ font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:rgba(246,241,231,0.5); margin-top:6px; }
+  .tier-price{ font-family:'Inter', sans-serif; font-size:13px; color:var(--rose); margin-top:10px; }
+
+  .grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:24px; margin-top:28px; }
+  .piece{ background:var(--cream-deep); border:1px solid var(--line); }
+  .frame{ aspect-ratio:4/5; position:relative; overflow:hidden; background:repeating-linear-gradient(135deg, rgba(200,169,104,0.07) 0 2px, transparent 2px 14px), var(--cream-deep); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:center; }
+  .frame img{ width:100%; height:100%; object-fit:cover; }
+  .frame-label{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:14px; color:var(--rose); text-align:center; padding:0 16px; }
+  .piece-info{ padding:16px 18px 18px; text-align:center; }
+  .piece-title{ font-family:'Cormorant Garamond', serif; font-size:19px; font-weight:600; }
+  .piece-price{ margin-top:6px; font-family:'Inter', sans-serif; font-size:13px; color:var(--bronze-light); }
+
+  .bottom-cta{ text-align:center; margin-top:56px; padding:40px 24px; background:var(--cream-deep); border:1px solid var(--line); color:var(--cream); }
+  .bottom-cta h2{ font-family:'Cormorant Garamond', serif; font-size:26px; font-weight:500; }
+  .bottom-cta p{ margin:10px 0 22px; font-size:15px; color:rgba(246,241,231,0.75); }
+
+  footer{ text-align:center; padding:44px 0 60px; font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.04em; color:rgba(246,241,231,0.5); border-top:1px solid var(--line); margin-top:20px; }
+  footer a{ color:var(--bronze-light); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><img src="images/logo-mark.png" alt="Gallery of Five Dreams">GALLERY OF FIVE DREAMS</div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collection</a>
+      <a href="pen-inks.html">Pen &amp; Inks</a>
+      <a href="origins.html">Origins</a>
+      <a href="digital.html" class="active">Digital Collection</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Every Piece Begins a Story</div>
+    <h1>Select Works. Instant Download.</h1>
+    <p class="sub">High-resolution files of select original paintings and drawings, ready to print at home or keep close on your favorite screen. Delivered instantly through Etsy — multiple file sizes and formats available per piece.</p>
+    <a class="etsy-cta" href="https://galleryoffivedreams.etsy.com" target="_blank" rel="noopener">Shop on Etsy</a>
+    <div class="etsy-note">Secure checkout · Instant download · Handled entirely by Etsy</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!--
+    ============================================================
+    HOW TO UPDATE THIS PAGE
+    ============================================================
+    Organized by pricing tier (Signature / Premium / Core / Entry
+    Fine Art). To add a piece: duplicate a <div class="piece">
+    block within the right tier section, point <img src> at the
+    file in /images/, set the title.
+
+    Origins Series is an ongoing, growing collection — as new
+    pieces arrive and are photographed, add them to the Entry
+    Fine Art grid below (all Origins pieces sit in that tier).
+
+    If individual Etsy listings go live per piece, wrap the
+    .piece block in <a href="LISTING_URL">.
+  -->
+
+  <div class="tier-section">
+    <div class="tier-head">
+      <div class="tier-name">Signature</div>
+      <div class="tier-desc">Defining BogaCA works — the Drawn to Life series</div>
+      <div class="tier-price">Collector $35 · Bundle $39</div>
+    </div>
+    <div class="grid">
+      <div class="piece">
+        <div class="frame"><img src="images/12-i-drew-a-fish.jpeg" alt="I Drew a Fish"></div>
+        <div class="piece-info"><div class="piece-title">I Drew a Fish</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/11-he-stayed.jpeg" alt="He Stayed"></div>
+        <div class="piece-info"><div class="piece-title">He Stayed</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/14-i-wanted-a-yellow-car.jpeg" alt="I Wanted a Yellow Car — Now I Have Two"></div>
+        <div class="piece-info"><div class="piece-title">I Wanted a Yellow Car — Now I Have Two</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/15-i-wanted-to-play-he-did-too.jpeg" alt="I Wanted to Play — He Did Too"></div>
+        <div class="piece-info"><div class="piece-title">I Wanted to Play — He Did Too</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-head">
+      <div class="tier-name">Premium</div>
+      <div class="tier-desc">Exceptionally strong image + narrative pairing</div>
+      <div class="tier-price">Collector $30 · Bundle $34</div>
+    </div>
+    <div class="grid">
+      <div class="piece">
+        <div class="frame"><img src="images/the-great-pretender.jpg" alt="The Great Pretender"></div>
+        <div class="piece-info"><div class="piece-title">The Great Pretender</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/embracing-the-contrast.jpg" alt="Embracing the Contrast"></div>
+        <div class="piece-info"><div class="piece-title">Embracing the Contrast</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/when-she-left.jpg" alt="When She Left"></div>
+        <div class="piece-info"><div class="piece-title">When She Left</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/ny-city-breaking-through-concrete.jpg" alt="NY City: Breaking Through Concrete"></div>
+        <div class="piece-info"><div class="piece-title">NY City: Breaking Through Concrete</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/passagenviertel.jpg" alt="Passagenviertel"></div>
+        <div class="piece-info"><div class="piece-title">Passagenviertel</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-head">
+      <div class="tier-name">Core</div>
+      <div class="tier-desc">Major, highly marketable works</div>
+      <div class="tier-price">Collector $28 · Bundle $32</div>
+    </div>
+    <div class="grid">
+      <div class="piece">
+        <div class="frame"><img src="images/beast.jpeg" alt="Beast"></div>
+        <div class="piece-info"><div class="piece-title">Beast</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tier-section">
+    <div class="tier-head">
+      <div class="tier-name">Entry Fine Art</div>
+      <div class="tier-desc">Accessible works that still meet our Etsy standard</div>
+      <div class="tier-price">Collector $20 · Bundle $24</div>
+    </div>
+    <div class="grid">
+      <div class="piece">
+        <div class="frame"><img src="images/calico.jpg" alt="Calico"></div>
+        <div class="piece-info"><div class="piece-title">Calico</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/moon-dreamer.jpg" alt="Moon Dreamer"></div>
+        <div class="piece-info"><div class="piece-title">Moon Dreamer</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/moon-watcher.jpg" alt="Moon Watcher"></div>
+        <div class="piece-info"><div class="piece-title">Moon Watcher</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/between-two-worlds.jpg" alt="Between Two Worlds"></div>
+        <div class="piece-info"><div class="piece-title">Between Two Worlds</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/mama-mary.jpg" alt="Mama Mary"></div>
+        <div class="piece-info"><div class="piece-title">Mama Mary</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/none-of-my-business.jpg" alt="None of My Business"></div>
+        <div class="piece-info"><div class="piece-title">None of My Business</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/i-can-see-you.jpg" alt="I Can See You"></div>
+        <div class="piece-info"><div class="piece-title">I Can See You</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/before-the-morning-comes.jpg" alt="Before the Morning Comes"></div>
+        <div class="piece-info"><div class="piece-title">Before the Morning Comes</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/a-place-in-the-sun.jpg" alt="A Place in the Sun"></div>
+        <div class="piece-info"><div class="piece-title">A Place in the Sun</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/bahay-ni-lola.jpg" alt="Bahay ni Lola"></div>
+        <div class="piece-info"><div class="piece-title">Bahay ni Lola</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/passing-through.jpg" alt="Passing Through"></div>
+        <div class="piece-info"><div class="piece-title">Passing Through</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/a-soft-life-exists.jpg" alt="A Soft Life Exists"></div>
+        <div class="piece-info"><div class="piece-title">A Soft Life Exists</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/the-weary-banister.jpg" alt="The Weary Banister"></div>
+        <div class="piece-info"><div class="piece-title">The Weary Banister</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/the-gazebo.jpg" alt="The Gazebo"></div>
+        <div class="piece-info"><div class="piece-title">The Gazebo</div></div>
+      </div>
+      <div class="piece">
+        <div class="frame"><img src="images/where-the-world-opens.jpg" alt="Where the World Opens"></div>
+        <div class="piece-info"><div class="piece-title">Where the World Opens</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-cta">
+    <h2>Own a piece today</h2>
+    <p>Every file arrives instantly after checkout — no waiting, no shipping.</p>
+    <a class="etsy-cta" href="https://galleryoffivedreams.etsy.com" target="_blank" rel="noopener">Shop the Full Collection on Etsy</a>
+  </div>
+
+</main>
+
+<footer>
+  Original paintings available separately in
+  <a href="collection.html">The Collection</a>,
+  <a href="pen-inks.html">Pen &amp; Inks</a>, and
+  <a href="origins.html">The Origins Series</a> ·
+  <a href="index.html">galleryoffivedreams.com</a>
+</footer>
+
+</body>
+</html>
