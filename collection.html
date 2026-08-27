@@ -8,8 +8,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
 
   :root{
-    --cream:#F6F1E7; --cream-deep:#221D18; --ink:#15120F;
-    --bronze:#A9803F; --bronze-light:#C8A968; --rose:#CC9C8F;
+    --cream:#F6F1E7; --cream-deep:#221D18; --frame-dark:#130F0B; --ink:#15120F;
+    --bronze:#9C7A3D; --bronze-light:#B8944F; --rose:#B8944F;
     --line:rgba(246,241,231,0.14);
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -19,8 +19,11 @@
 
   nav{ padding:22px 0; border-bottom:1px solid var(--line); }
   nav .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
-  .brand{ display:flex; align-items:center; gap:10px; font-family:'Cormorant Garamond', serif; font-weight:600; font-size:19px; letter-spacing:0.03em; color:var(--bronze-light); }
-  .brand img{ height:32px; width:32px; border-radius:50%; }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand img{ height:42px; width:42px; object-fit:contain; }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.1; }
+  .brand-main{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:20px; letter-spacing:0.04em; color:var(--bronze-light); }
+  .brand-sub{ font-family:'Inter', sans-serif; font-size:9.5px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(200,148,79,0.7); margin-top:1px; }
   .navlinks{ display:flex; gap:26px; font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.05em; text-transform:uppercase; }
   .navlinks a{ text-decoration:none; opacity:0.75; }
   .navlinks a:hover, .navlinks a.active{ opacity:1; border-bottom:1px solid var(--bronze-light); padding-bottom:3px; }
@@ -36,7 +39,7 @@
   .section-name{ font-family:'Cormorant Garamond', serif; font-size:26px; font-weight:600; color:var(--bronze-light); }
 
   .flagship{ margin-bottom:120px; margin-top:20px; }
-  .flagship-image{ width:100%; max-height:600px; object-fit:contain; background:var(--cream-deep); border:1px solid var(--line); display:block; margin-bottom:36px; }
+  .flagship-image{ width:100%; max-height:600px; object-fit:contain; background:var(--frame-dark); border:1px solid var(--line); display:block; margin-bottom:36px; }
   .flagship-content{ text-align:center; max-width:560px; margin:0 auto; }
   .flagship-title{ font-family:'Cormorant Garamond', serif; font-size:32px; font-weight:600; color:var(--cream); margin-bottom:10px; }
   .flagship-info{ font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--bronze-light); margin-bottom:26px; }
@@ -49,7 +52,7 @@
   .featured-piece:last-child{ margin-bottom:0; }
   .featured-piece.reverse{ direction:rtl; }
   .featured-piece.reverse > *{ direction:ltr; }
-  .featured-image{ width:100%; height:400px; object-fit:contain; background:var(--cream-deep); border:1px solid var(--line); display:block; }
+  .featured-image{ width:100%; height:400px; object-fit:contain; background:var(--frame-dark); border:1px solid var(--line); display:block; }
   .featured-number{ font-family:'Inter', sans-serif; font-size:11px; letter-spacing:0.15em; text-transform:uppercase; color:rgba(246,241,231,0.4); margin-bottom:8px; }
   .featured-title{ font-family:'Cormorant Garamond', serif; font-size:26px; font-weight:600; color:var(--cream); margin-bottom:8px; }
   .featured-info{ font-family:'Inter', sans-serif; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--bronze-light); margin-bottom:22px; }
@@ -59,7 +62,7 @@
 
   .quiet-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:26px; }
   .quiet-piece{ background:var(--cream-deep); border:1px solid var(--line); display:flex; flex-direction:column; }
-  .quiet-image{ width:100%; height:280px; object-fit:cover; border-bottom:1px solid var(--line); }
+  .quiet-image{ width:100%; height:280px; object-fit:contain; background:var(--frame-dark); border-bottom:1px solid var(--line); }
   .quiet-info{ padding:18px 20px 22px; }
   .quiet-title{ font-family:'Cormorant Garamond', serif; font-size:19px; font-weight:600; color:var(--cream); margin-bottom:4px; }
   .quiet-meta{ font-family:'Inter', sans-serif; font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; color:rgba(246,241,231,0.5); margin-bottom:12px; }
@@ -79,7 +82,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand"><img src="images/logo-mark.png" alt="Gallery of Five Dreams">GALLERY OF FIVE DREAMS</div>
+    <div class="brand"><img src="images/logo-mark.jpg" alt="Gallery of Five Dreams"><div class="brand-text"><span class="brand-main">Gallery</span><span class="brand-sub">Of Five Dreams</span></div></div>
     <div class="navlinks">
       <a href="index.html">Home</a>
       <a href="collection.html" class="active">Collection</a>

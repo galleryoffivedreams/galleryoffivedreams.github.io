@@ -9,7 +9,7 @@
 
   :root{
     --cream:#F6F1E7; --cream-deep:#221D18; --ink:#15120F;
-    --bronze:#A9803F; --bronze-light:#C8A968; --rose:#CC9C8F;
+    --bronze:#9C7A3D; --bronze-light:#B8944F; --rose:#B8944F;
     --line:rgba(246,241,231,0.14);
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -37,14 +37,14 @@
   .sold-ribbon{ position:absolute; top:16px; right:-6px; background:var(--bronze-light); color:var(--ink); font-family:'Inter',sans-serif; font-size:11px; letter-spacing:0.08em; padding:6px 16px; z-index:2; }
 
   .frame{ aspect-ratio:4/5; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; background:repeating-linear-gradient(135deg, rgba(200,169,104,0.07) 0 2px, transparent 2px 14px), var(--cream-deep); border-bottom:1px solid var(--line); }
-  .frame img{ width:100%; height:100%; object-fit:cover; }
+  .frame img{ width:100%; height:100%; object-fit:contain; padding:10px; }
   .frame::before{ content:''; position:absolute; inset:14px; border:1.5px solid var(--bronze-light); pointer-events:none; }
   .frame-label{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:14px; color:var(--rose); text-align:center; padding:0 20px; position:relative; z-index:1; }
 
   .piece-info{ padding:22px 24px 26px; }
   .piece-title{ font-family:'Cormorant Garamond', serif; font-size:22px; font-weight:600; }
   .piece-meta{ font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; color:rgba(246,241,231,0.55); margin-top:4px; }
-  .piece-framing{ font-family:'Inter', sans-serif; font-size:11.5px; letter-spacing:0.04em; color:var(--bronze-light); margin-top:6px; }
+  .piece-framing{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:12.5px; letter-spacing:0.01em; color:rgba(246,241,231,0.42); margin-top:8px; }
   .piece-tagline{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:16px; color:var(--rose); margin-top:14px; line-height:1.5; }
   .piece-desc{ font-family:'EB Garamond', serif; font-size:14.5px; line-height:1.75; color:rgba(246,241,231,0.8); margin-top:12px; white-space:pre-line; }
   .piece-price{ margin-top:16px; font-family:'Inter', sans-serif; font-size:15px; font-weight:600; color:var(--bronze-light); }
@@ -58,7 +58,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand">GALLERY OF FIVE DREAMS</div>
+    <div class="brand"><img src="images/logo-mark.jpg" alt="Gallery of Five Dreams"><div class="brand-text"><span class="brand-main">Gallery</span><span class="brand-sub">Of Five Dreams</span></div></div>
     <div class="navlinks">
       <a href="index.html">Home</a>
       <a href="collection.html">Collection</a>

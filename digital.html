@@ -9,7 +9,7 @@
 
   :root{
     --cream:#F6F1E7; --cream-deep:#221D18; --ink:#15120F;
-    --bronze:#A9803F; --bronze-light:#C8A968; --rose:#CC9C8F;
+    --bronze:#9C7A3D; --bronze-light:#B8944F; --rose:#B8944F;
     --line:rgba(246,241,231,0.14);
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -19,8 +19,11 @@
 
   nav{ padding:22px 0; border-bottom:1px solid var(--line); }
   nav .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
-  .brand{ display:flex; align-items:center; gap:10px; font-family:'Cormorant Garamond', serif; font-weight:600; font-size:19px; letter-spacing:0.03em; color:var(--bronze-light); }
-  .brand img{ height:32px; width:32px; border-radius:50%; }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand img{ height:42px; width:42px; object-fit:contain; }
+  .brand-text{ display:flex; flex-direction:column; line-height:1.1; }
+  .brand-main{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:20px; letter-spacing:0.04em; color:var(--bronze-light); }
+  .brand-sub{ font-family:'Inter', sans-serif; font-size:9.5px; letter-spacing:0.28em; text-transform:uppercase; color:rgba(200,148,79,0.7); margin-top:1px; }
   .navlinks{ display:flex; gap:26px; font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.05em; text-transform:uppercase; }
   .navlinks a{ text-decoration:none; opacity:0.75; }
   .navlinks a:hover, .navlinks a.active{ opacity:1; border-bottom:1px solid var(--bronze-light); padding-bottom:3px; }
@@ -45,7 +48,7 @@
   .grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:24px; margin-top:28px; }
   .piece{ background:var(--cream-deep); border:1px solid var(--line); }
   .frame{ aspect-ratio:4/5; position:relative; overflow:hidden; background:repeating-linear-gradient(135deg, rgba(200,169,104,0.07) 0 2px, transparent 2px 14px), var(--cream-deep); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:center; }
-  .frame img{ width:100%; height:100%; object-fit:cover; }
+  .frame img{ width:100%; height:100%; object-fit:contain; padding:10px; }
   .frame-label{ font-family:'Cormorant Garamond', serif; font-style:italic; font-size:14px; color:var(--rose); text-align:center; padding:0 16px; }
   .piece-info{ padding:16px 18px 18px; text-align:center; }
   .piece-title{ font-family:'Cormorant Garamond', serif; font-size:19px; font-weight:600; }
@@ -63,7 +66,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand"><img src="images/logo-mark.png" alt="Gallery of Five Dreams">GALLERY OF FIVE DREAMS</div>
+    <div class="brand"><img src="images/logo-mark.jpg" alt="Gallery of Five Dreams"><div class="brand-text"><span class="brand-main">Gallery</span><span class="brand-sub">Of Five Dreams</span></div></div>
     <div class="navlinks">
       <a href="index.html">Home</a>
       <a href="collection.html">Collection</a>
