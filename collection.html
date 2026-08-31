@@ -20,9 +20,9 @@
   nav{ padding:22px 0; border-bottom:1px solid var(--line); }
   nav .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
   .brand{ display:flex; align-items:center; gap:12px; }
-  .brand img{ height:38px; width:38px; object-fit:contain; flex-shrink:0; }
-  .brand-name{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:19px; letter-spacing:0.1em; text-transform:uppercase; color:var(--bronze-light); white-space:nowrap; text-shadow: 0 1px 0 rgba(0,0,0,0.55), 0 -1px 0 rgba(255,224,170,0.2); }
-  .navlinks{ display:flex; gap:26px; font-family:'Inter', sans-serif; font-size:13px; letter-spacing:0.05em; text-transform:uppercase; }
+  .brand img{ height:44px; width:44px; object-fit:contain; flex-shrink:0; }
+  .brand-name{ font-family:'Cormorant Garamond', serif; font-weight:600; font-size:23px; letter-spacing:0.08em; text-transform:uppercase; color:var(--bronze-light); white-space:nowrap; text-shadow: 0 1px 0 rgba(0,0,0,0.55), 0 -1px 0 rgba(255,224,170,0.2); }
+  .navlinks{ display:flex; gap:24px; font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.05em; text-transform:uppercase; }
   .navlinks a{ text-decoration:none; opacity:0.75; }
   .navlinks a:hover, .navlinks a.active{ opacity:1; border-bottom:1px solid var(--bronze-light); padding-bottom:3px; }
 
@@ -74,6 +74,15 @@
 
   footer{ text-align:center; padding:44px 0 60px; font-family:'Inter', sans-serif; font-size:12px; letter-spacing:0.04em; color:rgba(246,241,231,0.5); border-top:1px solid var(--line); margin-top:40px; }
   footer a{ color:var(--bronze-light); text-decoration:none; }
+
+  @media (max-width:680px){
+    nav .wrap{ flex-wrap:nowrap; }
+    .navlinks{ flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; gap:18px; font-size:11px; padding-bottom:2px; scrollbar-width:none; }
+    .navlinks::-webkit-scrollbar{ display:none; }
+    .navlinks a{ white-space:nowrap; }
+    .brand-name{ font-size:15px; letter-spacing:0.06em; }
+    .brand img{ height:30px; width:30px; }
+  }
 </style>
 </head>
 <body>
