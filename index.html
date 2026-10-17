@@ -113,8 +113,19 @@
   footer a{ color:var(--bronze-light); text-decoration:none; }
 
   @media print{
-    .print-bar, nav, .painting-price{ display:none; }
-    body{ background:#fff; color:#000; }
+    .print-bar, nav, .painting-price{ display:none !important; }
+    html, body{ background:#fff !important; color:#15120F !important; }
+    .cover::before{ display:none; }
+    .cover-cta-group, .cover-quicklinks{ display:none !important; }
+    .cover-eyebrow, .intro-eyebrow{ color:#86642F !important; }
+    .cover-title, .intro-name, .painting-title{ color:#15120F !important; }
+    .cover-sub, .painting-subtitle{ color:#86642F !important; }
+    .cover-artists, .cover-edition, .painting-number, .painting-info{ color:#5a5248 !important; }
+    .intro-body p, .painting-body, .painting-body p{ color:#2a2520 !important; }
+    .cover-rule, .intro-rule, .cover-mid-rule{ background:#86642F !important; }
+    .painting-img{ background:transparent !important; border:none !important; }
+    .painting{ page-break-inside:avoid; break-inside:avoid; }
+    .cover, .intro{ page-break-after:always; break-after:page; }
   }
 
   @media (max-width:680px){
