@@ -114,19 +114,22 @@
 
   
   @media print{
-    .print-bar, nav, .painting-price{ display:none !important; }
-    html, body{ background:#fff !important; color:#15120F !important; }
-    .cover::before{ display:none; }
+    @page{ margin:14mm; }
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    html, body{ background:#15120F !important; }
+    .print-bar, nav, .painting-price, .no-print{ display:none !important; }
     .cover-cta-group, .cover-quicklinks{ display:none !important; }
-    .cover-eyebrow, .intro-eyebrow{ color:#86642F !important; }
-    .cover-title, .intro-name, .painting-title{ color:#15120F !important; }
-    .cover-sub, .painting-subtitle{ color:#86642F !important; }
-    .cover-artists, .cover-edition, .painting-number, .painting-info{ color:#5a5248 !important; }
-    .intro-body p, .painting-body, .painting-body p{ color:#2a2520 !important; }
-    .cover-rule, .intro-rule, .cover-mid-rule{ background:#86642F !important; }
-    .painting-img{ background:transparent !important; border:none !important; }
-    .painting{ page-break-inside:avoid; break-inside:avoid; }
-    .cover, .intro{ page-break-after:always; break-after:page; }
+    .painting{ margin:0 auto; padding:0; }
+    .painting-img{ max-height:500px; margin-bottom:24px; }
+    .painting-info{ margin-bottom:12px; }
+    .painting-body{ font-size:14.5px; line-height:1.7; }
+    .detail-label{ break-before:page; page-break-before:always; margin:0 0 18px; }
+    .detail-img{ max-height:820px; }
+    .painting{ break-after:page; page-break-after:always; }
+    .painting:last-of-type{ break-after:auto; }
+    .cover, .intro, .series-intro{ break-after:page; page-break-after:always; margin-top:0; margin-bottom:0; }
+    .intro{ margin-top:0; margin-bottom:0; }
+    .intro-body p, .series-body{ font-size:14.5px; line-height:1.7; }
   }
 
   @media (max-width:680px){
@@ -417,7 +420,7 @@
   </div>
 </div>
 
-<div class="closing">
+<div class="closing no-print">
   <div class="closing-title">Payment Options</div>
   <p class="closing-body">Once a piece is confirmed, payment can be made through any of the following.</p>
   <div class="payment-methods">
