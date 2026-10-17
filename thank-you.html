@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Gallery of Five Dreams</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --ink:        #0d0c0b;
+    --stone:      #1a1714;
+    --ash:        #2e2b28;
+    --fog:        #4a4540;
+    --silver:     #9a9490;
+    --parchment:  #c8c0b0;
+    --cream:      #e8e0d0;
+    --gold:       #b8924a;
+    --gold-light: #d4aa6a;
+    --white:      #f2ede6;
+
+    --display:  'Playfair Display', Georgia, serif;
+    --body:     'EB Garamond', Georgia, serif;
+    --fine:     'Cormorant Garamond', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { font-size: 16px; }
+
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: var(--body);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+  }
+
+  .thanks-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 480px;
+  }
+
+  .thanks-page::before {
+    content: '';
+  }
+
+  .thanks-rule-top {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, var(--gold));
+    margin-bottom: 48px;
+  }
+
+  .thanks-eyebrow {
+    font-family: var(--fine);
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+  }
+
+  .thanks-title {
+    font-family: var(--display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 32px;
+    letter-spacing: 0.03em;
+  }
+
+  .thanks-body {
+    font-family: var(--body);
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--parchment);
+    margin-bottom: 40px;
+  }
+
+  .thanks-rule-mid {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin-bottom: 40px;
+  }
+
+  .thanks-note {
+    font-family: var(--fine);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--silver);
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+
+  .thanks-cta {
+    display: inline-block;
+    padding: 14px 36px;
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    text-decoration: none;
+    font-family: var(--fine);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+
+  .thanks-cta:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  .thanks-rule-bottom {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    margin-top: 48px;
+  }
+
+  .thanks-gallery {
+    font-family: var(--fine);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fog);
+    margin-top: 32px;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="thanks-page">
+  <div class="thanks-rule-top"></div>
+  <div class="thanks-eyebrow">Gallery of Five Dreams</div>
+  <h1 class="thanks-title">Thank You</h1>
+  <p class="thanks-body">
+    Thank you so much for bringing this piece home. It means a great deal to us
+    that it found someone who connects with it.
+  </p>
+  <div class="thanks-rule-mid"></div>
+  <p class="thanks-note">
+    Your certificate of authenticity is on its way along with your piece.
+    If you ever want to share where it lives, we'd love to see.
+  </p>
+  <a href="https://galleryoffivedreams.com" class="thanks-cta">Back to the Gallery</a>
+  <div class="thanks-rule-bottom"></div>
+  <div class="thanks-gallery">Gallery of Five Dreams &nbsp;·&nbsp; Edition One &nbsp;·&nbsp; 2026</div>
+</div>
+
+</body>
+</html>
